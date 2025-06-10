@@ -1,11 +1,10 @@
 import streamlit as st
 import joblib
-import pickle
+
+st.title("Simulador de TOTAL_OP_(m)")
 
 try:
     pipeline = pickle.load(open('modelo_mejor.pkl', 'rb'))
-    print("✅ Modelo cargado correctamente")
+    st.success("Modelo cargado correctamente.")
 except Exception as e:
-    print("❌ Error al cargar el modelo:", e)
-
-st.title("Simulador de TOTAL_OP_(m)")
+    st.error("Modelo NO cargado")
