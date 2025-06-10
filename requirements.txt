@@ -3,4 +3,4 @@ pandas
 joblib
 streamlit
 plotly.express
-xgboost
+xgboost==3.0.2
